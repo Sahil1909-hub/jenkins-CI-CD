@@ -42,7 +42,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps{
-                bat 'docker build -t jenkins-CI-CD .'
+                bat 'docker build -t jenkins-ci-cd .'
             }
         }
 
@@ -54,7 +54,7 @@ pipeline {
 
         stage('Run Container') {
             steps{
-                bat 'docker run -d -p 5000:5000 --name jenkins-container-2 jenkins-CI-CD'
+                bat 'docker run -d -p 5000:5000 --name jenkins-container-2 jenkins-ci-cd'
             }
         }
     }
